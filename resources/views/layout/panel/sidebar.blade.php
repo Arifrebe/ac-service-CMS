@@ -45,6 +45,15 @@
                     </a>
                 </li>
 
+                <!-- Anggota -->
+                <li class="nav-item">
+                    <a href="{{ route('member.index')}}"
+                        class="nav-link {{ request()->routeIs('member.index') ? 'active' : '' }}">
+                        <i class="nav-icon fa-solid fa-users"></i>
+                        <p>Anggota</p>
+                    </a>
+                </li>
+
                 {{-- <li class="nav-item">
                     <a href="{{ route('beranda-admin')}}"
                         class="nav-link {{ request()->routeIs('beranda-admin') ? 'active' : '' }}">
