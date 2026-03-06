@@ -27,12 +27,17 @@
       <form action="{{ route('auth.login') }}" method="post">
         @csrf
         <div class="input-group mb-3">
-          <input type="email" name="email" class="form-control" placeholder="Email">
+          <input type="email" name="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" placeholder="Email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
             </div>
           </div>
+          @if ($errors->has('email'))
+            <div class="invalid-feedback">
+              {{ $errors->first('email') }}
+            </div>
+          @endif
         </div>
         <div class="input-group mb-3">
           <input type="password" name="password" class="form-control" placeholder="Password">
