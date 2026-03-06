@@ -22,7 +22,7 @@ class MemberController extends Controller
      */
     public function create()
     {
-        //
+        return view('panel.users.create');
     }
 
     /**

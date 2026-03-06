@@ -48,7 +48,7 @@
                 <!-- Anggota -->
                 <li class="nav-item">
                     <a href="{{ route('member.index')}}"
-                        class="nav-link {{ request()->routeIs('member.index') ? 'active' : '' }}">
+                        class="nav-link @activeRoutePrefix('member')">
                         <i class="nav-icon fa-solid fa-users"></i>
                         <p>Anggota</p>
                     </a>
